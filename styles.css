@@ -72,7 +72,52 @@ a {
 .site-shell {
   overflow: hidden;
 }
+.music-player {
+  width: 100%;
+  max-width: 720px;
+  margin: 30px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(157, 255, 208, 0.18);
+  box-shadow: var(--shadow);
+}
 
+.music-player iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+/* Floating Spotify Player */
+.floating-music {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 340px;
+  max-width: calc(100vw - 40px);
+  z-index: 9999;
+
+  border: 1px solid rgba(157, 255, 208, 0.25);
+  border-radius: 12px;
+  overflow: hidden;
+
+  background: #050807;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.55);
+}
+
+.floating-music iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .floating-music {
+    right: 10px;
+    bottom: 10px;
+    width: 300px;
+  }
+}
 .site-header {
   position: fixed;
   top: 0;
